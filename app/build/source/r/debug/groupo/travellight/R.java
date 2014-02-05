@@ -865,10 +865,11 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f070015;
         public static final int action_menu_presenter=0x7f070016;
         public static final int action_mode_close_button=0x7f070024;
-        public static final int action_settings=0x7f07003d;
+        public static final int action_settings=0x7f070040;
         public static final int activity_chooser_view_content=0x7f070025;
         public static final int always=0x7f07000f;
         public static final int beginning=0x7f07000a;
+        public static final int button=0x7f07003f;
         public static final int checkbox=0x7f07002d;
         public static final int collapseActionView=0x7f070011;
         public static final int container=0x7f07003c;
@@ -894,6 +895,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f070018;
         public static final int progress_horizontal=0x7f070019;
         public static final int radio=0x7f07002f;
+        public static final int radioButton=0x7f07003e;
         public static final int search_badge=0x7f070032;
         public static final int search_bar=0x7f070031;
         public static final int search_button=0x7f070033;
@@ -911,6 +913,7 @@ containing a value of this type.
         public static final int split_action_bar=0x7f07001e;
         public static final int submit_area=0x7f070039;
         public static final int tabMode=0x7f070002;
+        public static final int textView2=0x7f07003d;
         public static final int title=0x7f07002b;
         public static final int top_action_bar=0x7f070020;
         public static final int up=0x7f070021;
@@ -944,12 +947,15 @@ containing a value of this type.
         public static final int abc_popup_menu_item_layout=0x7f030014;
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
-        public static final int activity_login=0x7f030017;
-        public static final int fragment_login=0x7f030018;
-        public static final int support_simple_spinner_dropdown_item=0x7f030019;
+        public static final int activity_display_message=0x7f030017;
+        public static final int activity_login=0x7f030018;
+        public static final int fragment_display_message=0x7f030019;
+        public static final int fragment_login=0x7f03001a;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
     }
     public static final class menu {
-        public static final int login=0x7f0c0000;
+        public static final int display_message=0x7f0c0000;
+        public static final int login=0x7f0c0001;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f0a0000;
@@ -968,6 +974,7 @@ containing a value of this type.
         public static final int action_settings=0x7f0a000d;
         public static final int app_name=0x7f0a000e;
         public static final int hello_world=0x7f0a000f;
+        public static final int title_activity_display_message=0x7f0a0010;
     }
     public static final class style {
         /**  Customize your theme here. 
