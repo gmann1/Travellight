@@ -23,7 +23,7 @@ local.properties
 .idea/
 .gradle
 gradlew
-gradelw.bat
+gradlew.bat
 gradel.properties
 /*/local.properties
 /*/out
