@@ -1,5 +1,6 @@
 package groupo.travellight.app;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -22,9 +23,9 @@ public class login extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        
+        getMenuInflater().inflate(R.menu.mainscreen_actions, menu);
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.login, menu);
+        //getMenuInflater().inflate(R.menu.login, menu);
         return true;
     }
 
@@ -38,5 +39,11 @@ public class login extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    //
+    public void goToMain(View view){
+        Intent intent = new Intent (this, MainScreen.class);
+        startActivity(intent);
     }
 }
