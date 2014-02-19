@@ -2,15 +2,10 @@ package groupo.travellight.app;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
 
 public class MainScreen extends ActionBarActivity {
 
@@ -18,12 +13,6 @@ public class MainScreen extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
-
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
-                    .commit();
-        }
     }
 
 
@@ -31,7 +20,7 @@ public class MainScreen extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.mainscreen_actions, menu);
+        getMenuInflater().inflate(R.menu.actionbar_actions, menu);
         return true;
     }
 
@@ -42,36 +31,24 @@ public class MainScreen extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()){
             case R.id.action_help:
-                goToHelp(this.getCurrentFocus());
+                goToHelp();
+                return true;
+            case R.id.action_home:
+                goToMain();
+                return true;
 
+            default:
+                return super.onOptionsItemSelected(item);
         }
-//        int id = item.getItemId();
-//        if (id == R.id.action_help) {
-//            goToHelp();
-//            return true;
-//        }
-        return super.onOptionsItemSelected(item);
     }
 
-    public void goToHelp(View view){
+    public void goToHelp(){
        Intent intent = new Intent(this, HelpActivity.class);
        startActivity(intent);
     }
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-        public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main_screen, container, false);
-            return rootView;
-        }
+    public void goToMain(){
+        Intent intent = new Intent (this, MainScreen.class);
+        startActivity(intent);
     }
 
 }

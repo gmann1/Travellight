@@ -29,10 +29,4 @@
         android:text="Password"
         android:background="@android:drawable/editbox_background_normal" />
 
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="Next"
-        android:onClick="goToMain"/>
-
 </LinearLayout>
